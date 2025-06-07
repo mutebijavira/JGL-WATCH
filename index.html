@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>ATOM WATCH</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+<header class="header">
+  <div class="logo">AtomWatch</div>
+  <nav class="nav">
+    <a href="#">Home</a>
+    <a href="#">Movies</a>
+    <a href="#">Series</a>
+    <a href="#">kids</a>
+    <a href="#">My List</a>
+  </nav>
+  <div class="header-right">
+    <input type="text" placeholder="Search..." class="search" id="searchInput"/>
+    <button class="btn secondary" onclick="toggleAuth()">Login</button>
+    <div class="profile-icon" title="Profile"></div>
+  </div>
+</header>
+
+<!-- Login Modal -->
+<div id="authModal" class="modal">
+  <div class="modal-content">
+    <span class="close" onclick="toggleAuth()">&times;</span>
+    <h3>Login</h3>
+    <input type="email" placeholder="Email" id="email" />
+    <input type="password" placeholder="Password" id="password" />
+    <button class="btn primary" onclick="loginUser()">Login</button>
+  </div>
+</div>
+
+<!-- Hero -->
+<section class="hero">
+  <div class="hero-content">
+    <h1>Watch the Best Movies Online</h1>
+    <p>Unlimited streaming of movies, series, and kids content on any device.</p>
+    <div class="hero-buttons">
+      <button class="btn primary" onclick="watchNow()">Watch Now</button>
+      <button class="btn secondary" onclick="openModal()">Add to List</button>
+    </div>
+  </div>
+</section>
+
+<!-- Video Preview -->
+<section class="section">
+  <h2>Featured Stream</h2>
+  <video width="100%" controls>
+    <source src="/Assets/10394868-uhd_3840_2160_30fps.mp4" type="video/mp4">
+    Your browser does not support HTML video.
+  </video>
+</section>
+
+<!-- Movies -->
+<section class="section">
+  <h2>Movie Library</h2>
+  <div class="movie-row" id="movieData"></div>
+</section>
+
+<div id="modal" class="modal">
+  <div class="modal-content">
+    <span class="close" onclick="closeModal()">&times;</span>
+    <p>Movie added to your list!</p>
+  </div>
+</div>
+
+<footer class="footer">
+  <p>&copy; 2025 AtomWatch. All rights reserved.</p>
+</footer>
+
+<script src="scripts.js"></script>
+</body>
+</html>
